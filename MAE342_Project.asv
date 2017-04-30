@@ -2,10 +2,11 @@
 clc, clear
 format compact 
 r2=2.25;r3=1.5; r4=1.875; r1=3.64; r04b=3.375; 
-w2=1.0; a2=.75;
+w2=1; a2=.75;
 T2=linspace(155.78,329.0,232);
-T3=linspace(303.87,29.44,232);
-T4=linspace(349.79,264.09,232);
+ T3=linspace(123.15,29.44,232);
+ T4=linspace(349.79,264.09,232);
+
  for p=1:232
      t2=T2(p); t4=T4(p); t3=T3(p); 
     %Velocity
@@ -38,21 +39,21 @@ T4=linspace(349.79,264.09,232);
  W4(1)
  A3(1)
  A4(1)
-fprintf('Omega3 at full deployment is %4.6f rad/s \n',W3(232))
-fprintf('Omega4 at full deployment is %4.6f rad/s \n\n',W4(232))
-fprintf('Alpha3 at full deployment is %4.6f rad/s^2 \n',A3(232))
-fprintf('Alpha4 at full deployment is %4.6f rad/s^2 \n\n',A4(232))
-fprintf('Position of wheel in x direction at full deployment is %4.6f feet \n',Xp(232))
-fprintf('Position of wheel in y direction at full deployment is %4.6f feet \n\n',Yp(232))
-fprintf('Velocity of wheel in x direction at full deployment is %4.6f ft/s \n',Xpd(232))
-fprintf('Velocity of wheel in y direction at full deployment is %4.6f ft/s \n\n',Ypd(232))
-fprintf('Acceleration of wheel in x direction at full deployment is %4.6f ft/s^2 \n',Xpdd(232))
-fprintf('Acceleration of wheel in y direction at full deployment is %4.6f ft/s^2 \n',Ypdd(232))
+fprintf('Omega3 at full deployment is %d rad/s \n',W3(232))
+fprintf('Omega4 at full deployment is %d rad/s \n\n',W4(232))
+fprintf('Alpha3 at full deployment is %d rad/s^2 \n',A3(232))
+fprintf('Alpha4 at full deployment is %d rad/s^2 \n\n',A4(232))
+fprintf('Position of wheel in x direction at full deployment is %d feet \n',Xp(232))
+fprintf('Position of wheel in y direction at full deployment is %d feet \n\n',Yp(232))
+fprintf('Velocity of wheel in x direction at full deployment is %d ft/s \n',Xpd(232))
+fprintf('Velocity of wheel in y direction at full deployment is %d ft/s \n\n',Ypd(232))
+fprintf('Acceleration of wheel in x direction at full deployment is %d ft/s^2 \n',Xpdd(232))
+fprintf('Acceleration of wheel in y direction at full deployment is %d ft/s^2 \n',Ypdd(232))
 %Graphs
 P=1:232;
-X=subplot(2,1,1);plot(P,W3,P,W4); xlabel('steps');ylabel('rad/sec');
+X=subplot(2,1,1);plot(P,W3,P,W4); xlabel('degrees');ylabel('rad/sec');
 title('Omega shifts during deployment');legend('w3','w4')
-Alpha=subplot(2,1,2);plot(P,A3,P,A4);xlabel('steps');ylabel('rad/sec^2');
+Alpha=subplot(2,1,2);plot(P,A3,P,A4);xlabel('degrees');ylabel('rad/sec^2');
 title('Alpha shifts during deployment');legend('a3','a4')
 figure
 position=subplot(2,2,1);plot(Xp,Yp);title('Position');

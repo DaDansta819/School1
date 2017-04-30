@@ -28,7 +28,7 @@ A4=[-2.4067,-1.152065];
 T2=[155.78,329.93]; 
 T3=[303.87,29.44];
 T4=[349.85,263.9];
-disp('What the forces are without considering Fi and Moment of Inertia')
+disp('What the forces are with considering Fi and Moment of Inertia')
 for p=1:3
        if p==1 %Deployment 
        disp('Deployment')
